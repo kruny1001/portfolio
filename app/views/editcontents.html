@@ -1,0 +1,55 @@
+<style>
+    .ex-moved{color:red}
+</style>
+
+
+    <md-content style="background-color:white;">
+        <div layout="row" style="background-color: #4db6ac">
+            <md-button ng-click="back()" class="md-fab" aria-label="Eat cake">
+                <md-icon md-svg-src="dImages/ionicIcons/android-arrow-back.svg"></md-icon>
+            </md-button>
+            <h3 class="md-title" style="color:white; padding-left:20px;"> Material Editor </h3>
+            <md-button type="submit" ng-click="update(cnt)">Update Content</md-button>
+        </div>
+        <section>
+            <p> order materials </p>
+            <div ng-repeat="mat in materials">
+                <div>{{mat.title}}</div>
+            </div>
+        </section>
+        <section style="background:white;" layout="row" layout-align="start start" layout-padding>
+            <form flex="70" style="width:100%; max-width: 800px" name="userForm">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Title</label>
+                        <input required name="name" ng-model="cnt.title" />
+                        <div class="hint" ng-if="showHints"> Write a title </div>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Description</label>
+                        <input required name="name" ng-model="cnt.description" />
+                        <div class="hint" ng-if="showHints"> Write a description</div>
+                    </md-input-container>
+                </div>
+                <text-angular style="max-width: 800px;margin: 0 auto;padding: 20px;" ng-if="isChapter" ng-model="cnt.chapterContent"></text-angular>
+                <md-content>
+
+                    <md-content dragula='"test-bag"' dragula-model='cnt.cnt' class="content" style="
+                    width:800px; background:white; max-width:800px;  padding:20px;"></md-content>
+
+                </md-content>
+            </form>
+            <span flex="5"></span>
+            <md-content flex="25" style="height: 500px; right:0px; background-color:white;">
+                <md-content style="right: 10px;  background-color:white;">
+                    <super-editor content="cnt.cnt"></super-editor>
+                </md-content>
+                <!--<se-photo></se-photo>-->
+                <!--<md-content>-->
+                    <!--<pre>{{cnt.cnt |json}}</pre>-->
+                <!--</md-content>-->
+            </md-content>
+        </section>
+    </md-content>

@@ -1,0 +1,17 @@
+.git
+.idea
+.sass-cache
+.tmp
+back
+bower_components
+dist
+docker
+docks
+motion
+node_modules
+sh
+surveyResult
+test
+testExamples
+.DS_Store
+.firebaserc

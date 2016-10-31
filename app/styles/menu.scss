@@ -1,0 +1,173 @@
+.logo_container{
+  margin-top:80px;
+  width:300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.header-logo{
+  text-decoration: none;
+  span {
+    text-decoration: none;
+  }
+}
+
+md-whiteframe {
+  background: #fff;
+  margin: 10px;
+  padding: 20px; }
+
+.device {
+  width:70%;
+  height:200px;
+  background-color:#111;
+  position:relative;
+  text-align:center;
+  margin:20px auto;
+  font-size: 1.5em;
+  display: table;
+  border: 1px solid #555;
+}
+
+.device p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.boxResponsive {
+  cursor:pointer;
+  width:100%;
+  height:100%;
+  position:absolute;
+  color:#ccc;
+  display:table;
+}
+
+.boxResponsive code {
+  font-size: 1.3em;
+}
+
+.red {
+  background-color:#833;
+}
+
+/////////////////
+// !Required! Globals
+// ====================================================================
+
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+.app {
+  // scroll trick
+  overflow-y: scroll;
+  height: 100vh;
+  // end
+}
+
+// !Required Styles!
+// ====================================================================
+
+$dragaebel-menu-width: 180px;
+$dragaebel-menu-bg: #1D2B2B;
+$dragaebel-gutter: 30px;
+
+.dragaebel-lcontainer {
+  padding: 0 calc(50% - #{$dragaebel-gutter}*11);
+  padding-top: 20px;
+}
+
+.dragaebel-toggle {
+  display: flex;
+  justify-content: center;
+  margin-left: 80%;
+  position: relative;
+  top: 0;
+  transform: translateY(-80px);
+}
+
+// Allow nav to open when JS fails
+.no-js .dragaebel-nav:target {
+  margin-right: 0;
+}
+
+.dragaebel-nav {
+  height: 100vh;
+  margin-right: -$dragaebel-menu-width; //  most consistent in testing over translateX(100%)
+  -ms-overflow-style: none; // hide scrollbar in IE
+  overflow-y: auto; // when viewport height decreases scroll the overflow.
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $dragaebel-menu-width;
+  background: $dragaebel-menu-bg;
+}
+
+.dragaebel-nav::-webkit-scrollbar {
+  width: 0 !important; // hide scrollbar in Binky and WebKitty
+}
+
+
+.menu-btn1 {
+  background-color: white;
+  color: #203e54;
+  padding: 6px 6px 6px 6px;
+  margin: 6px 8px 6px 8px;
+  max-width: 340px;
+  min-width: 320px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration:none;
+  border: none;
+  outline: none;
+}
+.menu-btn1:not([disabled]):hover {
+  background-color: rgba(255, 101, 58, 0.96);
+  color: white;
+}
+.menu-btn1[disabled] {
+  color : rgb(187, 187, 187);
+  background-color: rgba(230, 230, 229, 0.96);
+}
+
+.menu-container{
+  margin-top:50px;
+}
+
+.menu-box{
+  margin-bottom: 25px;
+  margin: 0 auto;
+  width:100%;
+  color:#333;
+  padding:8px;
+  max-width:950px;
+  border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+//-------------------------------- Research Page -----------------------------//
+.main-menu-page{
+  overflow-x: hidden; height: 100%;
+  background-color: #fff;
+  color: #333;
+}
+
+.header{
+
+}
+
+
+.main-hr{
+  width:100%;
+}

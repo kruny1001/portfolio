@@ -1,0 +1,9 @@
+<section>
+    <div ng-if="!editor">
+        <md-button ng-click="deleteElement()">Delete</md-button>
+    </div>
+
+    <div style="background:white; margin-top:15px; margin-bottom:15px;" ng-if="!editor" text-angular="text-angular"  ng-model="SEC.cnt"></div>
+    <div style="background:white; margin-top:15px; margin-bottom:15px;" ng-if="editor" ta-bind="text" ng-model="SEC.cnt" ta-readonly="disabled"></div>
+
+</section>

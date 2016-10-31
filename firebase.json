@@ -1,0 +1,27 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "firebase": "bcloud",
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "database-rules.json",
+      "storage.rules",
+      "**/.*",
+      "**/node_modules/**",
+      "**/bower_components/**",
+      "**/docs/**",
+      "**/docker/**",
+      "**/back/**",
+      "**/motion/**",
+      "**/sh/**",
+      "**/test/**",
+      "**/testExamples/**"
+    ]
+  }
+}

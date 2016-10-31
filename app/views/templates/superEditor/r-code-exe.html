@@ -1,0 +1,47 @@
+<md-content style="margin-bottom: 7px; background-color: white;">
+    <style>
+        .ace_selection {
+            background: transparent;
+        }
+        .ace_cursor{
+            color: transparent;
+        }
+        .ace_active-line{
+            background: transparent !important;
+        }
+        .ace_content{
+            padding: 8px;
+        }
+    </style>
+    <div ng-show="tool" ng-hide="mode == 'read'">
+        <md-button ng-click="editor = !editor">Edit</md-button>
+        <md-button ng-click="deleteElement()">Delete</md-button>
+        <md-button ng-click="runTest(SEC.code)"> TEST </md-button>
+        <div>
+            <md-checkbox ng-model="SEC.codeOnly"> Code Only </md-checkbox>
+            <md-checkbox ng-model="SEC.cmdCode"> CMD Code </md-checkbox>
+            <md-checkbox ng-model="SEC.visualCode"> Visual Code </md-checkbox>
+            <md-checkbox ng-model="SEC.graphOnly"> Graph Only </md-checkbox>
+        </div>
+    </div>
+    <div>
+
+            <div layout="column">
+                <span style="font-weight: bold" ng-show="SEC.codeOnly">Code Example</span>
+                <span style="font-weight: bold" ng-show="!SEC.codeOnly">Try</span>
+                <div flex style="border: #d4d4d4 2px solid; border-radius:7px; min-height: 40px; height:150px;" class="course-ui-ace" ui-ace="aceOption" ng-model="SEC.code">
+                </div>
+            </div>
+            <div layout="row">
+                <md-button ng-show="SEC.cmdCode" class="md-raised" ng-click="runOpenCpu(SEC)">Run Code </md-button><span ng-if="isRunning"><md-progress-circular ng-disabled="activate" class="md-hue-2" md-diameter="20px"></md-progress-circular></span>
+                <md-button ng-show="SEC.visualCode" class="md-raised" ng-click="exePlot(SEC)">Draw Graph</md-button>
+            </div>
+
+
+        <!-- Result -->
+        <div ng-show="success" layout-gt-xs="row" layout-xs="column">
+            <pre style="max-height:600px; padding:8px; background:black; font-weight: bolder; color:white;" flex ng-if="SEC.result" >{{SEC.result}}</pre>
+            <div flex ng-if="SEC.visualCode" flex class="plotdiv" style="padding: 10px; height: 350px; max-height: 390px; max-width:390px" class="md-whiteframe-3dp"></div>
+        </div>
+    </div>
+</md-content>

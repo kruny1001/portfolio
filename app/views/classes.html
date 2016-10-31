@@ -1,0 +1,35 @@
+<md-content layout-padding class="main-container"
+            style="overflow-x: hidden; height: 100%;
+          background-color: #1f253d; color: #203e54;">
+    <div class="profile-container">
+        <div class="main-container">
+            <profile-header></profile-header>
+        </div>
+    </div>
+    <md-content layout-padding>
+
+
+        <md-list>
+            <md-subheader class="md-no-sticky">Class List {{classes.length}} </md-subheader>
+            <md-list-item ng-repeat="class in classes" ng-click="expandClass(class)" ng-init="class.toggleDetail = false" class="md-3-line">
+                <div class="md-list-item-text" layout="column">
+                    <p>{{class.title}}</p>
+                    <md-checkbox class="md-secondary" ng-model="person.selected"></md-checkbox>
+                    <div ng-if="class.toggleDetail">
+                        <div>{{class.createdAt | date}}</div>
+                        <div>{{class.description}}</div>
+                        <div>{{class.pubStatus}}</div>
+                        <div>{{class.title}}</div>
+                        <div>{{class.instructor.uid}}</div>
+                        <hr>
+                        <div ng-repeat="course in class.courses">
+                            <div>{{course.title}}</div>
+                        </div>
+                    </div>
+                </div>
+            </md-list-item>
+        </md-list>
+
+
+    </md-content>
+</md-content>

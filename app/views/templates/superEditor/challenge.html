@@ -1,0 +1,18 @@
+<section>
+    <div ng-show="tool" ng-hide="mode == 'read'">
+        <md-button ng-click="deleteElement()">Delete</md-button>
+    </div>
+    <div ng-if="viewer" data-datacamp-exercise data-lang="r">
+        <code data-type="pre-exercise-code">{{SEC.pre}}</code>
+        <code data-type="sample-code">{{SEC.sample}}</code>
+        <code data-type="solution">{{SEC.solution}} </code>
+        <code data-type="sct">{{SEC.sct}} </code>'
+        <!--<div data-type="hint">Use the assignment operator (<code><-</code>) to create the variable <code>a</code>.</div>-->
+    </div>
+    <div ng-if="!viewer">
+        <div layout="row" layout-sm="column"> <div flex style="min-height: 40px; height:150px;" class="course-ui-ace" ui-ace="aceOption" ng-model="SEC.pre"></div></div>
+        <div layout="row" layout-sm="column"> <div flex style="min-height: 40px; height:150px;" class="course-ui-ace" ui-ace="aceOption" ng-model="SEC.sample"></div></div>
+        <div layout="row" layout-sm="column"> <div flex style="min-height: 40px; height:150px;" class="course-ui-ace" ui-ace="aceOption" ng-model="SEC.solution"></div></div>
+        <div layout="row" layout-sm="column"> <div flex style="min-height: 40px; height:150px;" class="course-ui-ace" ui-ace="aceOption" ng-model="SEC.sct"></div></div>
+    </div>
+</section>

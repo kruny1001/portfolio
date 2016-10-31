@@ -1,0 +1,55 @@
+<md-content layout-padding
+            style="overflow-x: hidden; height: 100%;
+            padding: 24px; background-color: #fcda9d; color: #203e54;">
+    <md-toolbar class="md-warn">
+        <div class="md-toolbar-tools">
+            <h2 class="md-flex"style="font-weight: 700">
+                <a href="#/" >SDSU Statistics</a>
+            </h2>
+        </div>
+    </md-toolbar>
+    <style>
+        md-progress-linear{
+            height:15px;
+        }
+        md-progress-linear .md-container {
+            height:15px;
+        }
+        md-progress-linear .md-container .md-bar {
+            height:15px;
+        }
+    </style>
+
+    <md-list ng-cloak>
+        <md-subheader style="background-color: #fcda9d;" class="md-no-sticky">
+            <h3 class="md-display-2">R Introduction</h3>
+            <p class="md-secondary">Progress</p>
+            <div layout="row">
+                <md-progress-linear md-mode="determinate" value="70"></md-progress-linear>
+                <span>70%</span>
+            </div>
+
+            <div layout="row">
+                <md-progress-linear class="md-warn" md-mode="determinate" value="20"></md-progress-linear>
+                <span>20%</span>
+            </div>
+        </md-subheader>
+
+        <md-divider></md-divider>
+
+        <md-list-item ng-repeat="cnt in course" ng-click="startTopic($index)">
+            <p> {{ cnt.topic }} </p>
+            <p class="md-secondary">0%</p>
+        </md-list-item>
+    </md-list>
+
+    <div>
+        <div class="element"></div>
+    </div>
+
+    <md-button ng-click="listMenu()" style="position:fixed; bottom: 25px; right:25px; " class="md-fab" aria-label="Eat cake">
+        <md-icon md-svg-src="dImages/ionicIcons/android-menu.svg"></md-icon>
+    </md-button>
+</md-content>
+
+

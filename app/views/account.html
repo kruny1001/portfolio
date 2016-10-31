@@ -1,0 +1,18 @@
+<md-content layout="column" style="overflow: hidden; position:relative; background-color: white;" flex layout-fill>
+  <div class="profile-container" style="border-bottom: 2px solid black;">
+    <profile-header></profile-header>
+  </div>
+  <div class='menu-box' layout style="margin-top: 8px; color:black;">
+    <div flex-xs="100" flex-gt-sm="60">
+      <div layout="column" layout-align="start start">
+        <div ng-class="{'md-title':xsScreen, 'md-display-1':!xsScreen, }" style="padding-top: 0px;">Account Page</div>
+      </div>
+    </div>
+  </div>
+  <div class='menu-box' flex style="background:transparent;">
+      <section layout="column" layout-gt-xs="row" layout-align="start start" layout-margin style="width:100%; max-width:941px;">
+        <profile-user-box info="profile"></profile-user-box>
+        <profile-menu-box></profile-menu-box>
+      </section>
+  </div>
+</md-content>

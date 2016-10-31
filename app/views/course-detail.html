@@ -1,0 +1,91 @@
+<md-content layout-padding class="main-container"
+            style="overflow-x: hidden; height: 100%;
+          background-color: #1f253d; color: #203e54;">
+    <div class="profile-container">
+        <div class="main-container">
+            <profile-header></profile-header>
+        </div>
+    </div>
+
+    <div style="    margin-bottom: 25px;
+        margin: 0 auto;
+        color:white;
+        padding:8px;
+        max-width:950px;
+    border-radius: 5px;
+    background: #3468af;
+    border-radius: 5px;">
+
+    <md-content layout-padding>
+        <div class="md-display-2" style="text-align: center">{{courseInfo.title}}</div>
+        <div class="md-body-1">{{courseInfo.description}}</div>
+    </md-content>
+
+    <!--<md-button ng-click="recover()"> recover </md-button>-->
+    <md-content layout-padding>
+        <section ng-if="auth.Role === 'admin'">
+            <md-button ng-click="debug = !debug" ng-init="debug=false;"> Edit </md-button>
+            <md-content layout="row" ng-show="debug">
+                <div flex="50">
+                    <md-button ng-click="updateOrder()"> Save </md-button>
+                    <div ng-cloak dragula='"bag-one"' dragula-model="chapterList">
+                        <div ng-repeat="ch in chapterList">
+                            <p> {{ ch.title }} </p>
+                            <!--<md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>-->
+                        </div>
+                    </div>
+                </div>
+                <div flex="50">
+                    <pre>{{courseInfo | json}}</pre>
+                </div>
+            </md-content>
+        </section>
+
+        <md-grid-list
+                md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
+                md-row-height-gt-md="1:1" md-row-height="2:2"
+                md-gutter="12px" md-gutter-gt-sm="8px" >
+
+            <md-grid-tile dragular="'chapter-bag'" dragula-model="ch" ng-repeat="ch in chapterList">
+                <md-card class="chapterCard" flex ng-click="goToChapter(ch.$id)">
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img src="dImages/Rlogo.png"/>
+                        </md-card-avatar>
+                        <md-card-header-text>
+                            <span class="md-title">{{courseInfo.title}}</span>
+                            <span class="md-subhead">{{ch.createdAt | date}}</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline"> {{ch.title | short:true:titleLength:' ...'}} </span>
+                        </md-card-title-text>
+                    </md-card-title>
+
+                    <md-card-content>
+                        <p style="height:120px;">
+                            {{ch.description | short:true:180:' ...'}}
+                        </p>
+                        <!--<md-button ng-click="updateProgress(ch.$id)"> Start </md-button>-->
+                    </md-card-content>
+                </md-card>
+                <!--<md-grid-tile-footer>-->
+                    <!--<h3>#1: (3r x 2c)</h3>-->
+                <!--</md-grid-tile-footer>-->
+            </md-grid-tile>
+        </md-grid-list>
+
+        <!---->
+        <!--<h3 class="md-title">Chapter List</h3>-->
+        <!--<div ng-repeat="ch in chapterList">-->
+            <!--<h4 class="md-body-2">{{ch.title}}</h4>-->
+            <!--<h4 class="md-body-1">Material List</h4>-->
+            <!--<ul>-->
+                <!--<li class="md-caption" ng-repeat="mat in ch.materials"> {{mat.title}} </li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+    </md-content>
+  </div>
+</md-content>

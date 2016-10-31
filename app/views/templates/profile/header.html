@@ -1,0 +1,35 @@
+<!-- HEADER -->
+<div layout="row" ng-cloak>
+    <div style="margin-left:20px;">
+        <a class="header-logo" href="#/" style="cursor: pointer;text-decoration: none">
+            <sapn class="icon entypo-chart-line scnd-font-color"></sapn>
+            <span style="font-size: 20px;"> <strong>Kev Lab</strong></span>
+        </a>
+    </div>
+    <div flex></div>
+    <div hide-xs style="margin-right:20px;" ng-repeat="menu in menus">
+        <a ng-if="menu.target == 'self'" class="header-logo" style="cursor: pointer;text-decoration: none" ng-click="goTo(menu.dest)">
+            <span class="icon fontawesome-user scnd-font-color"></span>
+            <span> {{menu.name}}  </span>
+        </a>
+        <a ng-if="menu.target == '_blank'" class="header-logo" style="cursor: pointer;text-decoration: none" target="_blank" ng-href={{menu.dest}}>
+            <span class="icon fontawesome-user scnd-font-color"></span>
+            <span> {{menu.name}} </span>
+        </a>
+    </div>
+    <md-menu hide-gt-xs	 md-position-mode="target-right target" style="padding:0px;" >
+        <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon style="color:black;" md-menu-origin md-svg-src="dImages/ionicIcons/android-menu.svg"></md-icon>
+        </md-button>
+        <md-menu-content width="4" >
+            <md-menu-item ng-repeat="item in menus">
+                <md-button ng-click="actionMenu(item)">
+                    <div layout="row" flex>
+                        <p flex>{{item.name}}</p>
+                        <!--<md-icon md-menu-align-target md-svg-src="dImages/ionicIcons/android-menu.svg" style="margin: auto 3px auto 0;"></md-icon>-->
+                    </div>
+                </md-button>
+            </md-menu-item>
+        </md-menu-content>
+    </md-menu>
+</div>

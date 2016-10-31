@@ -1,0 +1,42 @@
+
+
+<md-content class="course" layout="column" layout-padding layout-fill>
+    <h3 class="md-display-2">Descriptive Statistics</h3>
+    <p class="md-body-1">is the term given to the analysis of data that helps describe, show or summarize data in a meaningful way such that, for example, patterns might emerge from the data.</p>
+    <md-button ng-click="test(code)">Test  </md-button>
+
+    <div class="course-float">
+            <h1 class="md-display-1">{{crntContent.title}}</h1>
+            <p> {{crntContent.desc}} </p>
+            <span mathjax-bind="crntContent.preDesc" style="font-size: 20px;"></span>
+
+        <div layout="column" layout-align="center center">
+            <div class="course-div-board-pre"> DD </div>
+
+            <div class="course-div-board">
+                <div class="course-div-board-table">
+                    <h3 class="md-title">Code Practice</h3>
+                    <div>You will learn in this section. How to create a scotter plot</div>
+                    <div>You will learn in this section. How to create a scotter plot</div>
+                    <div>You will learn in this section. How to create a scotter plot</div>
+                    <div ng-repeat="src in crntContent.source">
+                        <span class="md-title"> Example {{$index+1}}</span> <md-button class="md-raised" ng-click="runCodeR(src.code)"> Run R code</md-button>
+                        <div layout="row" layout-margin layout-sm="column">
+                            <div ng-if="src.code" flex class="course-ui-ace" ui-ace="aceOption" ng-model="src.code"></div>
+
+                        </div>
+                    </div>
+                    <pre flex>{{crntResult}}</pre>
+                    <pre class="after-run-code">{{crntContent.nextDesc}}</pre>
+
+                </div>
+            </div>
+            <!--<canvas class="course-canvas"></canvas>-->
+        </div>
+
+        <div layout="row" layout-align="end end">
+            <md-button class="md-primary md-raised" style="color:white" ng-click="prevContent()"> Prev </md-button>
+            <md-button class="md-warn md-raised" style="color:white" ng-click="nextContent()"> Next </md-button>
+        </div>
+    </div>
+</md-content>

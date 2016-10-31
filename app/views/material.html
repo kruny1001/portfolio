@@ -1,0 +1,102 @@
+<div layout="column" style="overflow: hidden; position:relative; background-color: white;" flex layout-fill>
+    <div class="profile-container" style="border-bottom: 2px solid black;">
+        <profile-header></profile-header>
+    </div>
+    <!-- <md-progress-linear md-mode="determinate" value="{{progressValue}}"></md-progress-linear> -->
+    <md-content class="material-list-cnt" layout="row" style="overflow:hidden; height: 100%;">
+        <div flex style="background-color: #E0E0E0; overflow: scroll;height: inherit;">
+            <!-- Chapter Information -->
+            <div ng-show="targetMat === null"
+                 style="height:100%; width: 100%;height: inherit;overflow: scroll;">
+                <br>
+                <md-content layout="column" layout="center center" style="background-color:white; width: 100%; max-width:942px; margin:0 auto; padding:20px;">
+                    <div  ng-bind-html="chapterInfo.chapterContent"></div>
+                </md-content>
+            </div>
+            <div ng-show="targetMat !== null"
+                 style="height:100%; width: 100%; background:white;
+                 height: inherit;overflow: scroll;" class="material-list-cnt">
+                <!-- <md-toolbar md-scroll-shrink style="background-color:#1E88E5">
+                    <div  class="md-toolbar-tools">
+                        <md-button class="md-icon-button" aria-label="Settings B" href="#/">
+                            <md-icon md-svg-icon="dImages/ionicIcons/arrow-left-a.svg"></md-icon>
+                        </md-button>
+                        <h2>
+                            <span>{{chapterInfo.title}}</span>
+                        </h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" aria-label="Favorite">
+                            <md-icon md-svg-icon="dImages/ionicIcons/clock.svg" style="color: greenyellow;"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="More">
+                            <md-icon md-svg-icon="dImages/ionicIcons/more.svg"></md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar> -->
+
+                <div ng-if="chapterInfo.instructor.uid === userAuth.uid" layout="row" style="background-color: rgba(0,0,0,.14);">
+                    <md-button class="md-body-1" href="#/edit-content/{{targetMat.$id}}"> Edit </md-button>
+                    <md-button class="md-warn md-raised demo-dialog-open-button" ng-click="showAlert($event)">Delete </md-button>
+                </div>
+                <br>
+
+                <md-content layout="column" layout-align="center center" style="background-color:white; width: 100%; max-width:942px; margin:0 auto; padding:20px;">
+                    <!-- <h3 class="md-display-1">{{targetMat.title}}</h3>
+                    <br><br> -->
+                    <md-content ng-cloak flex class="content" style="width:100%; background:white;">
+                    </md-content>
+                    <br><br>
+                </md-content>
+                <br>
+                <!--
+                <md-content layout="column" layout-align="center center" style="background-color:white; width: 100%; max-width:942px; margin:0 auto; padding:20px;">
+                    <div layout="column" style="width:100%;">
+                        <md-list>
+                            <md-subheader class="md-no-sticky" style="background-color: inherit"> Comments {{cmts.length}} </md-subheader>
+                            <md-list-item class="md-2-line" ng-repeat="cmt in cmts track by $index">
+                                <div class="md-list-item-text">
+                                    <h3>{{ cmt.name }}</h3>
+                                    <p>
+                                        {{cmt.body}}
+                                    </p>
+                                </div>
+                                <div style="padding:5px; padding-top:15px;">
+                                    <div ng-show="checkAutho(cmt)" class="md-caption" ng-click=" removeComment(cmt)">Remove</div>
+                                    <div class="md-caption">Edit(Not Yet)</div>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <comment-form ng-show="userAuth" on-target="{{targetMat.$id}}"></comment-form>
+                    </div>
+                </md-content>
+              -->
+              <div class="profile-container" style="border-top: 2px solid black;">
+                  <div class="main-container">
+                    <footer-stat></footer-stat>
+                </div>
+              </div>
+            </div>
+
+            <!-- <footer  style="position: fixed;
+    right: 0;
+    bottom: 16px;
+    padding: 0 16px;
+    /*width: calc(100% - 307px);*/
+    box-sizing: border-box;">
+                <div style="    max-width: calc(800px + 231px);margin: 0 auto;" layout="row">
+                    <md-button class="md-fab md-primary" aria-label="front" ng-click="setTargetMaterial($event, crntIndex-1)">
+                        <md-icon md-svg-src="dImages/ionicIcons/chevron-left.svg"></md-icon>
+                    </md-button>
+                    <span flex></span>
+                    <md-button  class="md-fab md-primary" aria-label="back" ng-click="setTargetMaterial($event, crntIndex+1)">
+                        <md-icon md-svg-src="dImages/ionicIcons/chevron-right.svg"></md-icon>
+                    </md-button>
+                </div>
+            </footer> -->
+        </div>
+
+
+    </md-content>
+
+
+</div>

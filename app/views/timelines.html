@@ -1,0 +1,42 @@
+<md-content layout="column" style="overflow: inherit; position:relative; background-color: white;" flex >
+    <div class="profile-container" style="border-bottom: 2px solid black;">
+        <profile-header></profile-header>
+    </div>
+
+    <div class='menu-box' layout style="margin-top: 8px; height:100%; color:black;">
+
+        <div class='menu-box' layout="column" style="margin-top: 8px; height:100%; color:black;">
+            <div ng-class="{'md-title':xsScreen, 'md-display-1':!xsScreen, }" style="font-weight: bold; padding-top: 0px;">
+                Timeline
+            </div>
+            <div class="timeline-container">
+                <ul class="timeline">
+                    <li ng-class-even="'timeline-inverted'" ng-repeat="tl in timelines">
+                        <div class="timeline-badge">
+                            <a><i class="fa fa-circle" ></i></a>
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>{{tl.title}}</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p>{{tl.desc}}</p>
+                            </div>
+                            <div class="timeline-footer">
+                                <p class="text-right">{{tl.date}}</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clearfix no-float"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="profile-container" style="border-top: 2px solid black;">
+        <div class="main-container">
+            <footer-stat></footer-stat>
+        </div>
+    </div>
+</md-content>

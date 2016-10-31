@@ -1,0 +1,31 @@
+<md-content layout-padding class="main-container" style="overflow-x: hidden; height: 100%;
+          background-color: #1f253d; color: #203e54;">
+    <div class="profile-container">
+        <div class="main-container">
+            <profile-header></profile-header>
+        </div>
+    </div>
+
+    <div ng-show-auth class="sub-cnt-classView">
+        Admin Tool
+        <div  layout-gt-sm="row">
+            <md-button class="md-raised" href="#/new-content">New Content</md-button>
+            <md-button class="md-raised" href="">Delete</md-button>
+            <md-button class="md-raised" href="">Publish</md-button>
+            <md-button class="md-raised" href="">Unpublish</md-button>
+        </div>
+    </div>
+    <br/>
+    <div class="sub-cnt-classView">
+        <div class="md-display-2"> {{classInfo.title}}</div>
+        <div class="md-body-1"> {{classInfo.description}}</div>
+    </div>
+
+    <div class="sub-cnt-classView">
+        <div ng-repeat="course in childCourses" style="padding:20px;">
+            <a style="text-decoration: none; color:white;" class="md-display-1" href="#/course-detail/{{course.$id}}"> {{course.title}}</a>
+            <div class="md-body-1"> {{course.description}}</div>
+        </div>
+    </div>
+
+</md-content>

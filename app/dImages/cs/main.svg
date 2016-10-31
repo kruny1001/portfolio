@@ -1,0 +1,66 @@
+<svg width="901px" height="966px" viewBox="62 132 901 966" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(62.000000, 132.000000)">
+        <polygon id="Line" fill="#87B2EC" points="0 964.085315 900 964.085315 900 965.416604 0 965.416604"></polygon>
+        <g id="Book-Cover" transform="translate(60.000000, 323.644659)">
+            <g id="Book" transform="translate(387.060884, 265.471972) rotate(-15.000000) translate(-387.060884, -265.471972) translate(209.060884, 38.971972)">
+                <path d="M320.758106,11.4438001 L45.8225866,11.4438001 C26.8520358,11.4438001 11.4556467,31.0498905 11.4556467,55.5024303 L11.4556467,407.971472 C11.4556467,432.203719 26.8520358,452.030103 45.8225866,452.030103 L320.758106,452.030103 C339.728657,452.030103 355.125046,432.203719 355.125046,407.971472 L355.125046,55.5024303 C355.125046,31.0498905 339.728657,11.4438001 320.758106,11.4438001" id="Container" fill="#87B2EC"></path>
+                <path d="M309.30246,-2.84217094e-14 L34.36694,-2.84217094e-14 C15.3963891,-2.84217094e-14 1.27897692e-13,19.8263836 1.27897692e-13,44.0586303 L1.27897692e-13,396.527672 C1.27897692e-13,420.759919 15.3963891,440.586303 34.36694,440.586303 L309.30246,440.586303 C328.273011,440.586303 343.6694,420.759919 343.6694,396.527672 L343.6694,44.0586303 C343.6694,19.8263836 328.273011,-2.84217094e-14 309.30246,-2.84217094e-14" id="Container" fill="#E7F0FD"></path>
+                <text id="강의노트" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI" font-size="48.9858012" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="98.2545639" y="232.802482">강의노트</tspan>
+                </text>
+                <text id="Koculus" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI" font-size="19.5943205" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="55.7005813" y="264.018598">Koculus</tspan>
+                </text>
+            </g>
+            <g id="Body-Line" transform="translate(545.873265, 102.833628) rotate(-360.000000) translate(-545.873265, -102.833628) translate(470.873265, 98.833628)" fill="#87B2EC">
+                <polygon id="Line" points="2.52808989 2.12280248 150 2.12280248 150 5.1197001 2.52808989 5.1197001"></polygon>
+                <path d="M0,3.68618413 C0,5.65321623 1.45715505,7.24749753 3.25500011,7.24749753 C5.05284518,7.24749753 6.51000023,5.65321623 6.51000023,3.68618413 C6.51000023,1.71915203 5.05284518,0.124870734 3.25500011,0.124870734 C1.45715505,0.124870734 0,1.71915203 0,3.68618413 Z" id="Dot"></path>
+            </g>
+            <g id="Body-Line-Copy" transform="translate(547.500000, 327.685227) rotate(-360.000000) translate(-547.500000, -327.685227) translate(471.000000, 323.685227)" fill="#87B2EC">
+                <polygon id="Line" points="3 2.12280248 153 2.12280248 153 5.1197001 3 5.1197001"></polygon>
+                <path d="M0,3.68618413 C0,5.65321623 1.45715505,7.24749753 3.25500011,7.24749753 C5.05284518,7.24749753 6.51000023,5.65321623 6.51000023,3.68618413 C6.51000023,1.71915203 5.05284518,0.124870734 3.25500011,0.124870734 C1.45715505,0.124870734 0,1.71915203 0,3.68618413 Z" id="Dot"></path>
+            </g>
+            <g id="Mind-Line" transform="translate(177.776967, 263.130075) rotate(-180.000000) translate(-177.776967, -263.130075) translate(102.276967, 259.130075)" fill="#87B2EC">
+                <polygon id="Line" points="3.31717435 2.12280248 151 2.12280248 151 5.1197001 3.31717435 5.1197001"></polygon>
+                <path d="M0,3.5613134 C0,5.5283455 1.45707554,7.12262679 3.25482251,7.12262679 C5.05256947,7.12262679 6.50964502,5.5283455 6.50964502,3.5613134 C6.50964502,1.5942813 5.05256947,0 3.25482251,0 C1.45707554,0 0,1.5942813 0,3.5613134 Z" id="Dot"></path>
+            </g>
+            <text id="코드" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI" font-size="34.2900609" font-weight="normal" fill="#87B2EC">
+                <tspan x="641" y="111.934452">코드</tspan>
+            </text>
+            <text id="&lt;!---Important----&gt;" font-family=".AppleSystemUIFont" font-size="15.6754564" font-weight="normal" fill="#87B2EC">
+                <tspan x="641" y="142.887916">&lt;!-- </tspan>
+                <tspan x="673.835795" y="142.887916" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI">Important </tspan>
+                <tspan x="743.716979" y="142.887916">-- &gt;</tspan>
+            </text>
+            <text id="실제로-적용할-수-있는-간단한-코드-" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI" font-size="15.6754564" font-weight="normal" fill="#87B2EC">
+                <tspan x="641" y="369.651101">실제로 적용할 수 있는 간</tspan>
+                <tspan x="641" y="384.651101">단한 코드 예제를 프로젝</tspan>
+                <tspan x="641" y="399.651101">트 단위로 </tspan>
+            </text>
+            <text id="짧고-꽉찬-동영상으로" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI" font-size="15.6754564" font-weight="normal" fill="#87B2EC">
+                <tspan x="0" y="302.720387">짧고 꽉찬 동영상으로</tspan>
+                <tspan x="0" y="317.720387">꼭 필요한 부분만 보자</tspan>
+            </text>
+            <text id="프로젝트단위" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI" font-size="34.2900609" font-weight="normal" fill="#87B2EC">
+                <tspan x="641" y="339.698671">프로젝트단위</tspan>
+            </text>
+            <text id="동영상" font-family=".AppleSDGothicNeoI-Regular, .Apple SD Gothic NeoI" font-size="34.2900609" font-weight="normal" fill="#87B2EC">
+                <tspan x="0.185120885" y="272.767957">동영상</tspan>
+            </text>
+        </g>
+        <g id="CTA-Button" transform="translate(348.000000, 172.821096)">
+            <rect id="Rectangle-4" fill="#87B2EC" x="0" y="0" width="200" height="61.7008334" rx="30.8504167"></rect>
+            <text id="Call-to-Action" font-family=".SFNSDisplay-Regular, .SF NS Display" font-size="21.5537525" font-weight="normal" fill="#FFFFFF">
+                <tspan x="36.1596373" y="38.9813857">Call to Action</tspan>
+            </text>
+        </g>
+        <text id="책보다-빠른-개발-소개서" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="39.188641" font-weight="bold" fill="#87B2EC">
+            <tspan x="265.549209" y="35">책보다 빠른 개발 소개서</tspan>
+            <tspan x="226.73286" y="82">코드, 동영상과 설명으로 쉽게 </tspan>
+            <tspan x="304.60069" y="129">풀어쓴 개발 지침서</tspan>
+        </text>
+    </g>
+</svg>

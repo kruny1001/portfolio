@@ -1,0 +1,72 @@
+<md-content style="padding:10px" class="md-whiteframe-3dp">
+    <h2 class="md-display-1">{{target.topic}}</h2>
+    <!-- TEST PURPOSE -->
+    <md-button ng-click="popCnt()">
+        Pop
+    </md-button>
+
+    <div ng-repeat="ele in history track by $index">
+        <h2 class="md-body-1">{{ele.desc}}</h2>
+        <div layout="row" layout-margin layout-sm="column">
+            <div flex style="height:150px;" class="course-ui-ace" ui-ace="aceOption" ng-model="ele.code"></div>
+        </div>
+        <code-terminal></code-terminal>
+
+        <!--<pre class="result-code">{{ele.result}}</pre>-->
+
+        <!--<pre>{{ele.code}}</pre>-->
+        <md-button class="md-raised" ng-click="runOpenCpu(ele)">Run the Code 1</md-button>
+        <md-button class="md-raised" ng-click="exePlot(ele)">Visual Code</md-button>
+
+        <div layout="row" layout-margin layout-sm="column">
+            <md-virtual-repeat-container style="margin: 8px; height: 292px; width: 400px; background-color:aliceblue;" id="vertical-container">
+                <div md-virtual-repeat="item in ele.result"
+                     class="repeated-item" flex>
+                    {{item}}
+                </div>
+            </md-virtual-repeat-container>
+            <div flex id="plotdiv" style="padding: 10px; height: 292px;" class="md-whiteframe-3dp"></div>
+        </div>
+        <div>
+            <md-button ng-click="checkRecord()"> Check Cnt</md-button>
+            <md-button ng-click="popCnt()"> Next </md-button>
+        </div>
+
+        <h3 class="md-title"> Help Contents - {{target.topic}}</h3>
+        <div class="fb-like" data-href="https://statsdsu.firebaseapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+            <div layout="row" layout-sm="column" layout-margin="5" layout-padding>
+                <div flex style="margin-right:2px">
+                    <fieldset>
+                        <div layout="row" layout-sm="column" layout-wrap>
+                            <div flex="50">
+                                <md-list ng-cloak>
+                                    <md-subheader class="md-no-sticky">Resources</md-subheader>
+                                    <md-list-item >
+                                        <a target="_blank" href="#/read/-K4iIa9fdgbYf-vojAXG"> Add facebook comments plugin </a>
+                                    </md-list-item>
+                                    <md-list-item >
+                                        <a target="_blank" href="#/read/-K4ekZ9j2xbjSvBWFeuT"> User Progress Report </a>
+                                    </md-list-item>
+                                </md-list>
+                            </div>
+                            <div flex="50">
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div flex layout="row" layout-align="center start">
+                    <div id="fb-comment-box" fb-comment
+                         class="fb-comments"
+                         page-href="https://statsdsu.firebaseapp.com/{{target.topic}}"
+                         numposts="5"
+                         colorscheme="light">
+                    </div>
+                </div>
+            </div>
+        <!--<img ng-src="http://tmp.ocpu.io/x0b515b94b2/graphics/last/png">-->
+    </div>
+
+
+
+</md-content>

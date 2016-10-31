@@ -1,0 +1,43 @@
+
+<svg style="width:100%; height:100%;" viewBox="62 1208 901 822" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Testimonials" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(62.000000, 1208.000000)">
+        <polygon id="Line" fill="#87B2EC" points="0 820.083333 900 820.083333 900 821.416 0 821.416"></polygon>
+        <text id="Title-for-other-peop" font-family="Helvetica-Bold, Helvetica" font-size="34" font-weight="bold" fill="#87B2EC">
+            <tspan x="222.359375" y="33">Title for other people saying </tspan>
+            <tspan x="226.169434" y="74">great things about the book</tspan>
+        </text>
+        <text id="Lorem-ipsum-dolor-si" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#87B2EC">
+            <tspan x="284" y="198">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra </tspan>
+            <tspan x="284" y="216">nisl neque, sit amet pretium arcu porttitor id. Duis ut urna ac velit </tspan>
+            <tspan x="284" y="234">egestas semper. Mauris congue metus dui, nec sollicitudin leo dignissim </tspan>
+            <tspan x="284" y="252">ut.</tspan>
+        </text>
+        <text id="Lorem-ipsum-dolor-si" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#87B2EC">
+            <tspan x="284" y="386">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra </tspan>
+            <tspan x="284" y="404">nisl neque, sit amet pretium arcu porttitor id. Duis ut urna ac velit </tspan>
+            <tspan x="284" y="422">egestas semper. Mauris congue metus dui, nec sollicitudin leo dignissim </tspan>
+            <tspan x="284" y="440">ut.</tspan>
+        </text>
+        <text id="Lorem-ipsum-dolor-si" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#87B2EC">
+            <tspan x="284" y="591">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra </tspan>
+            <tspan x="284" y="609">nisl neque, sit amet pretium arcu porttitor id. Duis ut urna ac velit </tspan>
+            <tspan x="284" y="627">egestas semper. Mauris congue metus dui, nec sollicitudin leo dignissim </tspan>
+            <tspan x="284" y="645">ut.</tspan>
+        </text>
+        <text id="First-Last-Name" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#87B2EC">
+            <tspan x="284" y="294">First Last Name</tspan>
+            <tspan x="284" y="312">Title, Company</tspan>
+        </text>
+        <text id="First-Last-Name" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#87B2EC">
+            <tspan x="284" y="482">First Last Name</tspan>
+            <tspan x="284" y="500">Title, Company</tspan>
+        </text>
+        <text id="First-Last-Name" font-family=".AppleSystemUIFont" font-size="16" font-weight="normal" fill="#87B2EC">
+            <tspan x="284" y="687">First Last Name</tspan>
+            <tspan x="284" y="705">Title, Company</tspan>
+        </text>
+    </g>
+</svg>

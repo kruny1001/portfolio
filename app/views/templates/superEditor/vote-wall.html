@@ -1,0 +1,76 @@
+<md-content >
+    <div class="md-title"> Vote </div>
+    <p>{{ clock  | date:'medium'}}</p>
+    <div>
+        <md-checkbox class="md-body-1" ng-model="record" aria-label="Checkbox 1">
+            Start Record: {{record}}
+        </md-checkbox>
+        <md-select class="md-body-1"  ng-model="selectedItem" md-selected-text="getSelectedText()">
+            <md-optgroup label="items">
+                <md-option ng-value="item" ng-repeat="item in items">Item {{item}}</md-option>
+            </md-optgroup>
+        </md-select>
+        <md-button ng-click="saveRecord()">Save Record</md-button>
+    </div>
+    <p>
+        Please select option
+    </p>
+    <pre>
+        {{touchInfoFirebase}}
+        {{touchInfoFirebase.time | date: 'medium'}}
+    </pre>
+    <style>
+        #circle {
+            width: 50px;
+            height: 50px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+            background: rgba(255, 0, 0, 0.26);
+            position: fixed;
+            z-index: 9;
+            top: 0;
+            left: 0;
+        }
+        #target {
+            width: 500px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            vertical-align: middle;
+            text-align: center;
+            color: white;
+            background-color: #444;
+            font-size: 36pt;
+            font-family: 'Futura', 'Avenir', 'Helvetica', sans-serif;
+        }
+        #targetPanel{
+            width: 500px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            vertical-align: middle;
+            text-align: center;
+            color: white;
+            background-color: #444;
+            font-size: 36pt;
+            font-family: 'Futura', 'Avenir', 'Helvetica', sans-serif;
+        }
+    </style>
+
+    <div id="targetPanel"
+         hm-custom="onHammer"
+         hm-manager-options='{}'
+         hm-recognizer-options='[
+        {"type":"pan","event":"twoFingerPan","pointers":2,"directions":"DIRECTION_ALL"},
+        {"type":"tap","event":"dbltap","pointers":2,"taps":1}
+      ]'>
+        {{eventType}}
+    </div>
+
+    <div id="circle"></div>
+    <!--<md-content layout="column" layout-align="center center" layout-margin style="width:100%;">-->
+        <!--<div style="border: 2px brown solid; height:300px; width: 500px;"></div>-->
+        <!--<div style="border: 2px #ffc31e solid; height: 300px; width: 500px;"></div>-->
+    <!--</md-content>-->
+</md-content>

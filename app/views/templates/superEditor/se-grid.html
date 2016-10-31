@@ -1,0 +1,37 @@
+<div>
+    <md-input-container class="md-icon-float md-icon-right md-block">
+        <label>Donation Amount</label>
+        <md-icon md-svg-src="img/icons/ic_card_giftcard_24px.svg"></md-icon>
+        <input ng-model="cols" type="number">
+    </md-input-container>
+</div>
+
+<div layout="row" layout-margin>
+    <img id="image" width="250" height="350" src="image/test1.jpg">
+    <div layout="column" flex="50">
+        <!--<md-slider-container>-->
+            <!--<span>Brightness</span>-->
+            <!--<md-slider flex min="-100" max="100" ng-model="target.brightness" aria-label="red" id="red-slider">-->
+            <!--</md-slider>-->
+            <!--<md-input-container>-->
+                <!--<input flex type="number" ng-model="target.brightness" aria-label="red" aria-controls="red-slider">-->
+            <!--</md-input-container>-->
+        <!--</md-slider-container>-->
+        <md-button ng-click="bright('+')"> Brightnedd + </md-button>
+        <md-button ng-click="bright('-')"> Brightnedd - </md-button>
+    </div>
+
+</div>
+
+
+<md-grid-list
+        md-cols-xs="2" md-cols-sm="2" md-cols-md="{{cols}}" md-cols-gt-md="6"
+        md-row-height-gt-md="1:1" md-row-height="2:2"
+        md-gutter="12px" md-gutter-gt-sm="8px" >
+    <md-grid-tile ng-repeat="item in items" class="gray" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
+        <img id="carman1" class="carman" style="height:100%;" ng-src="{{item.img}}">
+        <md-grid-tile-footer>
+            <h3>#1: (3r x 2c)</h3>
+        </md-grid-tile-footer>
+    </md-grid-tile>
+</md-grid-list>

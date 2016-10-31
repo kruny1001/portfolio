@@ -1,0 +1,26 @@
+<md-content layout="column" style="overflow: hidden; position:relative; background-color: white;" flex layout-fill>
+    <div class="profile-container" style="border-bottom: 2px solid black;">
+        <profile-header></profile-header>
+    </div>
+    <div class='menu-box' layout style="margin-top: 8px; color:black;">
+        <div flex-xs="100" flex-gt-sm="60">
+            <div layout="column" layout-align="start start">
+                <div ng-class="{'md-title':xsScreen, 'md-display-1':!xsScreen, }" style="padding-top: 0px;">Contact</div>
+            </div>
+        </div>
+    </div>
+    <div layout layout-align="center center" style="margin-top: 8px; color:black;">
+        <div style="min-width: 350px;" layout-gt-xs="row" layout="column" layout-align="center center">
+            <div style="border:2px solid black; padding:20px;" flex>
+                <h4 class="titular">Information</h4>
+                <p> Contact me followings:</p>
+                <div layout="column" layout-align="center start">
+                    <div class="md-raised"><strong>e-mail:</strong> kruny1001@gmail.com </div>
+                    <span flex="5"></span>
+                    <div class="md-raised"><strong>cell:</strong> 931-400-3069</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</md-content>
+

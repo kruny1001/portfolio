@@ -1,0 +1,31 @@
+<md-content layout="column" style="background:white;"
+            layout-align="center start">
+    <md-content layout="row">
+        <pre>
+        {{material |json}}
+        </pre>
+        <pre>
+        {{chapterInfo |json}}
+        </pre>
+    </md-content>
+    <!--Menu-->
+
+    <md-button ng-click="check()"> Check </md-button>
+
+    <md-content layout="column" style="max-width:1200px;    background-color: inherit; margin: 0 auto; width:100%;">
+        <md-input-container>
+            <label>Title</label>
+            <input ng-model="material.title" type="text">
+        </md-input-container>
+        <md-content class="content"  dragula-model='cnt' dragula='"test-bag"'></md-content>
+    </md-content>
+
+    <md-content><md-button class="md-raised md-primary" ng-click="createMaterial()"> Create Material </md-button></md-content>
+
+    <!--Module Toolbox-->
+    <md-content style="background-color:white;">
+        <super-editor content="material.cnt"></super-editor>
+    </md-content>
+
+
+</md-content>

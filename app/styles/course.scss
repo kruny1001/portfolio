@@ -1,0 +1,75 @@
+.course{
+  background-color: #e8e8e8;
+  overflow-x: hidden;
+  //bower sposition:absolute;
+  //border: dotted black 2px;
+}
+
+.course-float{
+  padding:10px;
+  background-color:white;
+  position: relative;
+  display:none;
+  //border: dotted red 1px;
+
+  .course-canvas{
+    width:100%;
+    height:auto;
+    background-color:black; margin:auto
+  }
+
+  .course-div-board-pre{
+    background-color: rgb(0, 0, 0);
+    height: 20px;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    display:none;
+  }
+  .course-div-board{
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    height: 720px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    vertical-align: baseline;
+    width: 100%;
+    background-color:black;
+    margin:auto;
+    padding: 20px;
+    border-radius: 5px;
+
+
+    .course-div-board-table{
+      padding:5px;
+      color:white;
+    }
+
+    .course-ui-ace{
+      height:200px;
+
+    }
+
+    .after-run-code{
+      display:none;
+    }
+  }
+
+}
+
+
+.chapterCard{
+
+}
+
+.chapterCard:hover{
+  background-color: rgba(120, 184, 255, 0.53);
+}

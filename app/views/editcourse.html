@@ -1,0 +1,89 @@
+
+<md-content layout-padding
+            style="overflow-x: hidden; height: 100%;
+            padding: 24px; background-color: #fcda9d; color: #203e54;">
+
+    <md-toolbar class="md-warn">
+        <div class="md-toolbar-tools">
+            <h2 class="md-flex"style="font-weight: 700">
+                <a href="#/" >SDSU Statistics</a>
+            </h2>
+        </div>
+    </md-toolbar>
+
+    <md-content style="padding:10px;">
+        <md-button href="#/admin"> Back to Admin </md-button>
+        <div>
+            <md-button class="md-raised md-primary" ng-click="openNewItemDialog($event, 'material', $routeParams)"> New Material </md-button>
+            <md-button class="md-raised md-primary" ng-click="openNewItemDialog($event, 'challenge', $routeParams)"> New Challenge </md-button>
+        </div>
+
+        <hr style="border-top: 3px double #8c8b8b; margin-top:5px;">
+
+        <md-input-container flex>
+            <label>Topic</label>
+            <input ng-model="item.topic">
+        </md-input-container>
+
+
+        <div style="margin-top:55px;" layout="row" layout-align="end start">
+            <div class="md-title"> Materials </div>
+            <span flex></span>
+        </div>
+
+        <hr style="border-top: 3px double #8c8b8b; margin-top:5px;">
+
+        <p class="md-caption"> List materials to cover the topic</p>
+
+        <div style="margin-bottom: 5px;" ng-repeat="mat in item.material track by $index">
+            <label style="margin-top:32px;">Step {{$index+1}}</label>
+            <div class="md-body-1">code</div>
+            <div style="height:200px;" class="course-ui-ace" ui-ace="aceOption" ng-model="mat.code"></div>
+            <md-input-container flex>
+                <label>Description</label> <textarea ng-model="mat.desc" columns="1" md-maxlength="350"></textarea>
+            </md-input-container>
+            <div layout="row" layout-align="end start">
+                <md-button ng-click="removeContentItem('material', $index)" flex class="md-raised md-warn">Delete Step: {{$index + 1}}</md-button>
+            </div>
+        </div>
+
+
+
+
+
+        <div style="margin-top:55px;" layout="row" layout-align="end start">
+            <div class="md-title">Challenges</div>
+            <span flex></span>
+        </div>
+        <hr style="border-top: 3px double #8c8b8b; margin-top:5px;">
+
+        <div ng-repeat="chal in item.challenge">
+            <md-input-container flex>
+                <label>Description</label> <textarea ng-model="chal.desc" columns="1" md-maxlength="350"></textarea>
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>Answer Code: </label> <textarea ng-model="chal.answerCode" columns="1" md-maxlength="350"></textarea>
+            </md-input-container>
+
+            <md-input-container flex>
+                <label>Answer Value:</label> <textarea ng-model="chal.answerValue" columns="1" md-maxlength="350"></textarea>
+            </md-input-container>
+
+            <label>Answer Code</label>
+            <div style="height:200px;" class="course-ui-ace" ui-ace="aceOption" ng-model="chal.answerCode"></div>
+
+            <div layout="row" layout-align="end start">
+                <md-button ng-click="removeContentItem('challenge', $index)" flex class="md-raised md-warn">Delete Challenge: {{$index + 1}}</md-button>
+            </div>
+
+        </div>
+        <md-button> New Challenge </md-button>
+
+        <div layout="column" layout-fill>
+            <md-button class="md-primary" ng-click="updateRecord()">Save</md-button>
+            <md-button class="md-accent">Publish</md-button>
+            <md-button class="md-warn">Delete</md-button>
+        </div>
+    </md-content>
+</md-content>

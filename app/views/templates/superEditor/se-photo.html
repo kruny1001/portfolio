@@ -1,0 +1,43 @@
+<md-content>
+    <div class="photos">
+        <p ng-if="photos.length === 0 || !photos">No photos were added yet</p>
+        <div class="md-title">Image Tool </div>
+        <form>
+            <div style="width:100%;">
+                <div class="drop-box" ngf-drop="uploadFiles($files)" ngf-drag-over-class="dragover" ng-model="files" ngf-select="uploadFiles($files)" multiple="true" title="upload" resetOnClick="true">Insert Image</div>
+            </div>
+        </form>
+        <md-grid-list
+                md-cols="2"
+                md-row-height="1:2"
+                md-gutter="12px" md-gutter-gt-sm="8px" >
+            <md-grid-tile class="gray" ng-repeat="photo in photos"
+                          style="background:rgba(12, 0, 0, 0.63)"
+                          md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1">
+                <!--<a cl-href="{{photo.id}}" format="jpg" target="_blank" style="height:inherit; width: inherit">-->
+                    <cl-image secure="true" style="width:100%;" public-id="{{photo.id}}" quality="100" format="jpg"/>
+                <!--</a>-->
+                <!--<md-grid-tile-footer>-->
+                    <!--<button class="btn btn-danger" ng-click="deleteImg(photo.public_id)">삭제</button>-->
+                <!--</md-grid-tile-footer>-->
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
+    <div ng-repeat="file in files">
+        <h3>{{file.name}} {{f.$error}} {{f.$errorParam}}</h3>
+        <div class="status">{{file.status}}</div>
+        <div class="progress-bar">
+            <div class="progress" style="width: {{file.progress}}%" ng-init="progress=0"></div>
+        </div>
+        <div>
+            <img width="100" height="100" ngf-src="file.result.url || file">
+        </div>
+        <div>
+            <table>
+                <tr ng-repeat="(key, value) in file.result">
+                    <td> {{key}}  </td> <td> {{ value }} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</md-content>

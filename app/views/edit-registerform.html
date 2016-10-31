@@ -1,0 +1,211 @@
+<div style="
+z-index: 8;
+width:100%;
+height:100%;
+position: fixed;
+background-image: url('dImages/sdstate/sdstate.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+opacity:0.7; "></div>
+<div class="main-container">
+    <div class="profile-container" style="    z-index: 19;position: absolute;width: 100%;opacity: 0.85;">
+        <div class="main-container">
+            <profile-header></profile-header>
+        </div>
+    </div>
+</div>
+
+<md-content layout="column" layout-align="center center" style="z-index:9; opacity:0.85;
+    background-color: inherit;" ng-cloak >
+    <div layout="column" layout-align="center center" style="padding:20px; margin-top:30px; max-width:950px;">
+        <div layout="column" layout-align="center center" layout-padding layout-margin
+             style="width: 100%; background-color: white;">
+            <h1 class="md-display-1"> Data Analytics Camp for High School Students </h1>
+        </div>
+        <div layout="column" layout-align="center stretch" layout-padding layout-margin
+             style="width: 100%; background-color: white;">
+            <div>
+                <p>
+                    It is a FREE 4-day summer camp. Food and lodging provided.
+                    You will learn some basic statistics and math topics. Have fun analyzing and visualizing data. Learn how to write computer programs through examples.
+                    Led by SDSU professors and graduate students, you will work in a computer lab at SDSU.
+                    Spaces are limited. So act fast.
+                </p>
+                <p>
+                    Solberg Hall, South Dakota State University, Brookings, SD.
+                </p>
+            </div>
+        </div>
+        <form name="userForm" ng-submit="updateNewUser()">
+            <!--Gender-->
+            <div layout="column" layout-align="center stretch" layout-padding layout-margin
+                 style="width: 100%; background-color: white;">
+                <div>
+                    <legend> Gender (optional)</legend>
+                    <div layout="column" layout-wrap layout-gt-sm="row" >
+                        <md-radio-group layout="row" ng-model="registerInfo.gender">
+                            <md-radio-button value="g1" class="md-primary">Male</md-radio-button>
+                            <md-radio-button value="g2" class="md-primary"> Female </md-radio-button>
+                            <md-radio-button value="g99" class="md-primary">Prefer not to answer</md-radio-button>
+                        </md-radio-group>
+                    </div>
+                </div>
+            </div>
+
+            <!--Information-->
+            <div layout="column" layout-align="center stretch" layout-padding layout-margin
+                 style="width: 100%; background-color: white;">
+                <fieldset class="standard">
+
+                    <legend> Information </legend>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Email</label>
+                            <input required type="email" name="userEmail" ng-model="registerInfo.userEmail"
+                                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                            <div ng-messages="userForm.userEmail.$error" role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Your email must be between 10 and 100 characters long and look like an e-mail address.
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>First name</label>
+                            <input md-maxlength="30" required name="fName" ng-model="registerInfo.fName" />
+                            <div ng-messages="userForm.fName.$error">
+                                <div ng-message="required">First Name is required.</div>
+                                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Last name</label>
+                            <input md-maxlength="30" required name="lName" ng-model="registerInfo.lName" />
+                            <div ng-messages="userForm.lName.$error">
+                                <div ng-message="required">Last Name is required.</div>
+                                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Age</label>
+                            <input required type="number" name="age" ng-model="registerInfo.age">
+                            <div ng-messages="userForm.age.$error" >
+                                <div ng-message="required">Age is required.</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Phone Number</label>
+                            <input required name="phone" ng-model="registerInfo.phone"  />
+                            <div ng-messages="userForm.phone.$error" >
+                                <div ng-message="required">Phone Number is required.</div>
+                                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>School name</label>
+                            <input md-maxlength="30" required name="school" ng-model="registerInfo.school" />
+                            <div class="hint" ng-if="showHints">Tell us what we should call you!</div>
+                            <div ng-messages="userForm.school.$error" >
+                                <div ng-message="required">School Name is required.</div>
+                                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container class="md-block" flex-gt-sm>
+                            <label>Grade in High school</label>
+                            <md-select name="grade" ng-model="registerInfo.grade" required>
+                                <md-option value="9">Grade 9</md-option>
+                                <md-option value="10">Grade 10</md-option>
+                                <md-option value="11">Grade 11</md-option>
+                                <md-option value="12">Grade 12</md-option>
+                            </md-select>
+                            <div class="errors" ng-messages="userForm.grade.$error" ng-if="myForm.$dirty">
+                                <div ng-message="required">Grade is Required</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                </fieldset>
+            </div>
+            <div layout="column" layout-align="center stretch" layout-padding layout-margin
+                 style="width: 100%; background-color: white;">
+                <fieldset class="standard">
+                    <legend> Ethnicity (optional) </legend>
+                    <p>Ethnicity origin (or Race): Please specify your ethnicity.</p>
+                    <div layout="column" layout-wrap layout-gt-sm="row" >
+
+                        <md-radio-group layout="column" ng-model="registerInfo.ethnicity" style="width:100%;">
+                            <div flex layout='row' layout-padding layout-align="start center" >
+                                <div><md-radio-button value="e1" class="md-primary">Asian or Pacific Islander</md-radio-button></div>
+                                <div><md-radio-button value="e2" class="md-primary">Asian Indian</md-radio-button></div>
+                            </div>
+                            <div flex layout='row' layout-padding layout-align="start center" >
+                                <div><md-radio-button value="e3" class="md-primary">Black/African American (non-Hispanic)</md-radio-button></div>
+                                <div><md-radio-button value="e4" class="md-primary">Caucasian/White</md-radio-button></div>
+                            </div>
+                            <div flex layout='row' layout-padding layout-align="start center" >
+                                <div><md-radio-button value="e5" class="md-primary">Native American</md-radio-button></div>
+                                <div><md-radio-button value="e6" class="md-primary">Latino/Hispanic</md-radio-button></div>
+                                <div><md-radio-button value="e7" class="md-primary">Puerto Rican</md-radio-button></div>
+                            </div>
+                            <div flex layout='row' layout-padding layout-align="start center" style="height:69px;" >
+                                <div><md-radio-button value="e8" class="md-primary">More than one race(specify)</md-radio-button></div>
+                                <div ng-if="data.ethnicity === 'e8'"><md-input-container class="md-block" flex-gt-sm>
+                                    <label>Specifies</label>
+                                    <input ng-model="data.ethnicity.extraEthnicity">
+                                </md-input-container></div>
+                            </div>
+                            <div flex layout='row' layout-padding layout-align="start center" >
+                                <div><md-radio-button value="e99" class="md-primary">Prefer not to answer</md-radio-button></div>
+                            </div>
+                        </md-radio-group>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div layout="column" layout-align="center stretch" layout-padding layout-margin
+                 style="width: 100%; background-color: white;">
+                <fieldset class="standard">
+                    <legend> Privacy Term </legend>
+                    <!--<md-button class="md-raised" ng-click="showTabDialog()"> Privacy Term</md-button>-->
+                    <p>
+                        All copyright, trade marks, design rights, patents and other intellectual property rights
+                        (registered and unregistered) in and on SDSU Online Services
+                        and SDSU Content belong to the SDSU and/or third parties (which may include you or other users.)
+                        The SDSU reserves all of its rights in SDSU Content and SDSU Online Services.
+                        Nothing in the Terms grants you a right or license to use any trade mark,
+                        design right or copyright owned or controlled by the SDSU or any other third party
+                        except as expressly provided in the Terms.
+                    </p>
+                </fieldset>
+            </div>
+            <div layout="row" layout-align="center stretch" layout-padding layout-margin
+                 style="width: 100%; background-color: white;">
+                <md-button class="md-warn md-raised"> Cancel </md-button>
+                <span flex="5"></span>
+                <md-button class="md-primary md-raised" type="submit"> Update </md-button>
+            </div>
+
+            <div layout="row" layout-xs="column" layout-align="start stretch" layout-padding layout-margin
+                 style="width: 100%; background-color: white;">
+                <h4> South Dakota State University </h4>
+                <p>
+                    This is support by National Science Foundation through SD EPSCoR program, and also by SDSU Department of Mathematics and Statistics.
+                <div> <b>Contact: <a href="mailto:Linda.Wendt@sdstate.edu">Linda.Wendt@sdstate.edu</a></b><br/><div>(605) 688-6196 </div></div>
+                </p>
+                <br/>
+                <div layout="column" hide-xs layout-padding>
+                    <img style="height:55px;" src="dImages/logo/epscor.png">
+                    <img style="height:55px;" src="dImages/logo/sdsu.png">
+                    <img style="height:55px;" src="dImages/logo/nsf.png">
+                </div>
+            </div>
+        </form>
+    </div>
+</md-content>

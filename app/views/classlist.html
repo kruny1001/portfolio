@@ -1,0 +1,74 @@
+<md-content layout-padding class="main-container" style="overflow-x: hidden; height: 100%;
+          background-color: #1f253d; color: #203e54;">
+    <div class="profile-container">
+        <div class="main-container">
+            <profile-header></profile-header>
+        </div>
+    </div>
+
+<div class="menu-box">
+    <h3 class="md-title"> Contents </h3>
+    <div class="menu-container" layout="row" style="margin:0px;"
+         layout-xs="column" layout-margin="20" layout-align="center stretch">
+
+        <div layout="column" style="background-color:white; padding: 5px; border-radius: 5px; color:black;" flex>
+            <div class="md-title"> Classes </div>
+            <hr style="margin:5px"/>
+            <a ng-repeat="class in classes" href="#/class/{{class.$id}}">{{class.title}}</a>
+        </div>
+
+        <div layout="column" style="background-color:white; padding: 5px; border-radius: 5px; color:black;" flex>
+            <div class="md-title"> Courses </div>
+            <hr style="margin:5px"/>
+            <a ng-repeat="course in courses" href="#/course-detail/{{course.$id}}">{{course.title}}</a>
+            <div class="md-title"> Information </div>
+            <hr style="margin:5px"/>
+            <a href="#/resources"> Resource </a>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="menu-box">
+    <h3 class="md-title"> User UI </h3>
+    <div class="menu-container" layout="row" layout-xs="column" layout-margin="20" layout-align="center start">
+
+        <div layout="column" >
+            <div class="md-title"> Courses </div>
+            <md-button class="menu-btn1" ng-click="goto('/course')">
+                <div class="md-body-1">Descriptive Statistics</div></md-button>
+            <md-button class="menu-btn1" ng-click="goto('/course/r-intro')">
+                <div class="md-body-1">R Intro </div></md-button>
+            <md-button class="menu-btn1" ng-click="goto('/course/r-vis')">
+                <div class="md-body-1">R Visualization</div></md-button>
+        </div>
+        <div layout="column">
+            <div class="md-title"> Information </div>
+            <md-button class="menu-btn1" href="#/resources"> <div class="md-body-1">Resource</div></md-button>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="menu-box">
+    <div class="menu-container"
+         layout="row" layout-xs="column"
+         layout-margin="20" layout-align="center start" >
+        <div layout="column" >
+            <div class="md-title"> Setting </div>
+            <md-button class="menu-btn1" href="#/login" ng-hide-auth> <div class="md-body-1">Login</div></md-button>
+            <md-button class="menu-btn1" href="#/account" ng-show-auth> <div class="md-body-1">Account</div></md-button>
+            <md-button class="menu-btn1" href="#/notification" ng-show-auth> <div class="md-body-1">Notification</div></md-button>
+            <md-button class="menu-btn1" href="#/test-progress" ng-show-auth> <div class="md-body-1">Progress</div></md-button>
+        </div>
+        <div layout="column" ng-show-auth>
+            <div class="md-title"> Admin  </div>
+            <md-button class="menu-btn1" href="#/createContent"> <div class="md-body-1">Create Content</div></md-button>
+            <md-button class="menu-btn1" href="#/admin"> <div class="md-body-1">Admin Page</div></md-button>
+            <md-button class="menu-btn1" href="#/write" > <div class="md-body-1"> Wrtie Blog </div></md-button>
+        </div>
+    </div>
+</div>
+
+</md-content>

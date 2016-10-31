@@ -1,0 +1,21 @@
+
+<md-tabs md-dynamic-height md-border-bottom>
+    <md-tab label="Comments">
+        <md-content class="md-padding">
+            <h3> Survey Comments ({{surveyResult.length}})</h3>
+            <div ng-repeat="item in surveyResult" style="max-width:600px; margin:10px 0; padding:8px; border-radius: 8px; background-color:#CDDC39;">
+                <div class="md-body-2">#{{$index + 1 }} {{item.gender}}</div>
+                <div class="md-body-1">{{item.msg}}</div>
+            </div>
+        </md-content>
+    </md-tab>
+    <md-tab label="prefered Major">
+        <md-content class="md-padding">
+            <h3> Survey Preferred Major ({{surveyResult.length}})</h3>
+            <div ng-repeat="item in surveyResult" style="max-width:600px; margin:10px 0; padding:8px; border-radius: 8px; background-color:#CDDC39;">
+                <div>#{{$index + 1 }} {{item.gender}}</div>
+                <div>{{item.major}}</div>
+            </div>
+        </md-content>
+    </md-tab>
+</md-tabs>
